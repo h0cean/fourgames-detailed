@@ -14,10 +14,11 @@ C.nginx
 
 # zero step
 
-buy a domain and point it to your host's ip by using Cloudflare DNS service
+A.buy a domain and point it to your host's ip by using Cloudflare DNS service
 (you can use your preferred ones)
 
 B.ssh into host
+
 C.make your host's traffic secure by configuring ufw, firewalld, IPTABLES...etc.
 
 # SSL configurations
