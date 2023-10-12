@@ -10,6 +10,8 @@ A.a domain with SSL/TLS
 B.linux-based-host with sudo access 
 C.nginx 
 
+# zero step
+buy a domain and point it to your host-ip
 
 # SSL configurations
 
