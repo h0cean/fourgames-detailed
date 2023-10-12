@@ -11,9 +11,12 @@ B.linux-based-host with sudo access
 C.nginx 
 
 # zero step
-buy a domain and point it to your host-ip
+buy a domain and point it to your host-ip by using Cloudflare DNS service (you can use your preferred ones)
+ssh into host
+make your host's traffic secure by configuring ufw, firewalld, IPTABLES...etc.
 
 # SSL configurations
+
 
 
 
