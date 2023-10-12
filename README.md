@@ -7,7 +7,9 @@ this repo is a more completed version  to fourgames docs and apis : https://gith
 
 # requirements:
 A.a domain with SSL/TLS
+
 B.linux-based-host with sudo access 
+
 C.nginx 
 
 # zero step
