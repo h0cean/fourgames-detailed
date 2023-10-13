@@ -77,3 +77,12 @@ You have now nginx installed on your server but not ready to serve web pages. yo
 `$ cd /tmp/`
 
 `$ git clone https://github.com/Neilpang/acme.sh.git`
+ 
+ Login as Root User ( `sudo-i` ) and execute:
+
+`touch /root/.bashrc`
+
+`cd /tmp/acme.sh/`
+
+`acme.sh --install --accountemail your-email-id@domain-here`
+ 
