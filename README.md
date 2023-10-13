@@ -115,6 +115,5 @@ Next, change the dir and install diffie-hellman key-exchange-file
 
 replace DOMAIN and  execute:
 
-`acme.sh -d "$DOMAIN" --ecc --install-cert --fullchain-file "/etc/nginx/ssl/domain-name.abc/$DOMAIN.fullchain.cer.ecc" --key-file "/etc/nginx/ssl/domain-name.abc/$DOMAIN.key.ecc" --cert-file "/etc/nginx/ssl/domain-name.abc/$DOMAIN.cer.ecc"`
-
+`acme.sh -d "$DOMAIN" --ecc --install-cert --fullchain-file "/etc/nginx/ssl/$DOMAIN/$DOMAIN.fullchain.cer.ecc" --key-file "/etc/nginx/ssl/$DOMAIN/$DOMAIN.key.ecc" --cert-file "/etc/nginx/ssl/$DOMAIN/$DOMAIN.cer.ecc"`
 
