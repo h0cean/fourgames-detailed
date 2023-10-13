@@ -124,11 +124,7 @@ CONFIG_ROOT="/etc/nginx/ssl/${DOMAIN}"
 `acme.sh -d "$DOMAIN" \`
 
 `--ecc \`
-
 `--install-cert \`
-
 `--fullchain-file "${CONFIG_ROOT}/$DOMAIN.fullchain.cer.ecc" \`
-
 `--key-file "${CONFIG_ROOT}/$DOMAIN.key.ecc" \`
-
 `--cert-file "${CONFIG_ROOT}/$DOMAIN.cer.ecc"`
