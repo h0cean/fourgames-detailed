@@ -26,6 +26,9 @@ C. make your host's traffic secure by configuring ufw, firewalld, IPTABLES...etc
 
 
 # install nginx 
+
+execute
+
 $ sudo apt update
 
 $ sudo apt install nginx
@@ -63,11 +66,7 @@ $ sudo apt install nginx
 
 You have now nginx installed on your server but not ready to serve web pages. you have to start the nginx. You can do this by using this command:
 
-$ sudo systemctl start nginx
+$` sudo systemctl start nginx`
 
 
 # SSL/TLS and nginx configurations
-
-
-
-
