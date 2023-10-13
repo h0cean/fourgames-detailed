@@ -100,3 +100,16 @@ execute
 `acme.sh --issue --dns dns_cf --ocsp-must-staple --keylength ec-384 -d domain-name.abc -d '*.domain-name.abc'`
  
 Your Cloudflare DNS API key is sotred in /root/.acme.sh/
+
+## step 4 installing let's encrypt wildcard certificate
+DOMAIN="domain.abc"
+CONFIG_ROOT="/etc/nginx/ssl/${DOMAIN}"
+`acme.sh -d "$DOMAIN" \
+--ecc \
+--install-cert \
+--reloadcmd "systemctl reload nginx" \
+--fullchain-file "${CONFIG_ROOT}/$DOMAIN.fullchain.cer.ecc" \
+--key-file "${CONFIG_ROOT}/$DOMAIN.key.ecc" \
+--cert-file "${CONFIG_ROOT}/$DOMAIN.cer.ecc"
+`
+
