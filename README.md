@@ -113,18 +113,8 @@ Next, change the dir and install diffie-hellman key-exchange-file
 
 `openssl dhparam -out /etc/nginx/ssl/damain-name/dhparams.pem -dsaparam 4096`
 
-replace DOMAIN and CONFIG_ROOT with yours and execute:
+replace DOMAIN and  execute:
+
+`acme.sh -d "$DOMAIN" --ecc --install-cert --fullchain-file "/etc/nginx/ssl/domain-name.abc/$DOMAIN.fullchain.cer.ecc" --key-file "/etc/nginx/ssl/domain-name.abc/$DOMAIN.key.ecc" --cert-file "/etc/nginx/ssl/domain-name.abc/$DOMAIN.cer.ecc"`
 
 
-DOMAIN="domain-name.abc"
-
-CONFIG_ROOT="/etc/nginx/ssl/${DOMAIN}"
-
-
-`acme.sh -d "$DOMAIN" \`
-
-`--ecc \`
-`--install-cert \`
-`--fullchain-file "${CONFIG_ROOT}/$DOMAIN.fullchain.cer.ecc" \`
-`--key-file "${CONFIG_ROOT}/$DOMAIN.key.ecc" \`
-`--cert-file "${CONFIG_ROOT}/$DOMAIN.cer.ecc"`
