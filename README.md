@@ -72,3 +72,8 @@ You have now nginx installed on your server but not ready to serve web pages. yo
 
 
 # SSL/TLS and nginx configurations
+
+## step 1 install acmc.sh
+`$ cd /tmp/`
+
+`$ git clone https://github.com/Neilpang/acme.sh.git`
