@@ -109,18 +109,17 @@ make directory for certs:
 
 Next, change the dir and install diffie-hellman key-exchange-file
 
-`cd /etc/nginx/ssl/your-domain.abc/`
+`cd /etc/nginx/ssl/domain-name.abc/`
 
 `openssl dhparam -out /etc/nginx/ssl/damain-name/dhparams.pem -dsaparam 4096`
 
-
+replace DOMAIN and CONFIG_ROOT with yours and execute:
 
 
 DOMAIN="domain-name.abc"
 
 CONFIG_ROOT="/etc/nginx/ssl/${DOMAIN}"
 
-replace DOMAIN and CONFIG_ROOT with yours and execute:
 
 `acme.sh -d "$DOMAIN" \`
 
