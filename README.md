@@ -101,15 +101,37 @@ execute
  
 Your Cloudflare DNS API key is sotred in /root/.acme.sh/
 
+
 ## step 4 installing let's encrypt wildcard certificate
-DOMAIN="domain.abc"
+make directory for certs:
+
+`mkdir command -pv /etc/nginx/ssl/domain-name.abc/`
+
+Next, change the dir and install diffie-hellman key-exchange-file
+
+`cd /etc/nginx/ssl/your-domain.abc/`
+
+`openssl dhparam -out /etc/nginx/ssl/damain-name/dhparams.pem -dsaparam 4096`
+
+
+
+
+DOMAIN="domain-name.abc"
+
 CONFIG_ROOT="/etc/nginx/ssl/${DOMAIN}"
+
+replace DOMAIN and CONFIG_ROOT with yours and execute:
+
 `acme.sh -d "$DOMAIN" \
+
 --ecc \
+
 --install-cert \
---reloadcmd "systemctl reload nginx" \
+
 --fullchain-file "${CONFIG_ROOT}/$DOMAIN.fullchain.cer.ecc" \
+
 --key-file "${CONFIG_ROOT}/$DOMAIN.key.ecc" \
+
 --cert-file "${CONFIG_ROOT}/$DOMAIN.cer.ecc"
 `
 
