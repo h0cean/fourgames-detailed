@@ -17,11 +17,37 @@ C. nginx
 # zero step
 
 A. buy a domain and point it to your host's ip by using Cloudflare DNS service
-(you can use your preferred ones)
+(you can use your preferred ones). ssh into host and make your host's traffic secure by configuring ufw, firewalld, IPTABLES...etc.
+here i use iptables: 
+the result would be only port 22, 80 and 443 are accepting traffic 
+##### be carefull if your host's ssh-port is not 22, change the commands below for this specific port to the one you already use:
+execute:
 
-B. ssh into host
+ `iptables -A INPUT -i lo -j ACCEPT`
+ 
+ `iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT`
+ 
+ `iptables -A INPUT -p icmp -j ACCEPT`
+ 
+ `iptables -A INPUT -p tcp --dport 22 -j ACCEPT `
 
-C. make your host's traffic secure by configuring ufw, firewalld, IPTABLES...etc.
+ `iptables -A INPUT -p tcp --dport 80 -j ACCEPT`
+ 
+ `iptables -A INPUT -p tcp --dport 443 -j ACCEPT`
+ 
+ `iptables -P INPUT DROP`
+
+ `ip6tables -A INPUT -i lo -j ACCEPT`
+ 
+`ip6tables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT`
+ 
+ `ip6tables -A INPUT -p ipv6-icmp -j ACCEPT`
+ 
+ `ip6tables -P INPUT DROP`
+
+make them persistant:
+
+`apt install iptables-persistent`
 
 
 
