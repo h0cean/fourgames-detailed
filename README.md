@@ -80,9 +80,11 @@ You have now nginx installed on your server but not ready to serve web pages. yo
  
  Login as Root User ( `sudo-i` ) and execute:
 
-`touch /root/.bashrc`
+`$ touch /root/.bashrc`
 
-`cd /tmp/acme.sh/`
+`$ cd /tmp/acme.sh/`
 
-`acme.sh --install --accountemail your-email-id@domain-here`
+`$ acme.sh --install --accountemail your-email-id@domain-here`
+
+`$ acme.sh --set-default-ca --server letsencrypt`
  
