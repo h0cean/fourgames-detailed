@@ -87,4 +87,11 @@ You have now nginx installed on your server but not ready to serve web pages. yo
 `$ acme.sh --install --accountemail your-email-id@domain-here`
 
 `$ acme.sh --set-default-ca --server letsencrypt`
+
+## step 2 set CF_Token
+excute: 
+
+`export CF_Token="Your_Cloudflare_DNS_API_Key"`
+
+
  
