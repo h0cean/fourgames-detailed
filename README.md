@@ -122,16 +122,14 @@ CONFIG_ROOT="/etc/nginx/ssl/${DOMAIN}"
 
 replace DOMAIN and CONFIG_ROOT with yours and execute:
 
-`acme.sh -d "$DOMAIN" \
+`acme.sh -d "$DOMAIN" \`
 
---ecc \
+`--ecc \`
 
---install-cert \
+`--install-cert \`
 
---fullchain-file "${CONFIG_ROOT}/$DOMAIN.fullchain.cer.ecc" \
+`--fullchain-file "${CONFIG_ROOT}/$DOMAIN.fullchain.cer.ecc" \`
 
---key-file "${CONFIG_ROOT}/$DOMAIN.key.ecc" \
+`--key-file "${CONFIG_ROOT}/$DOMAIN.key.ecc" \`
 
---cert-file "${CONFIG_ROOT}/$DOMAIN.cer.ecc"
-`
-
+`--cert-file "${CONFIG_ROOT}/$DOMAIN.cer.ecc"`
