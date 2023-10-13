@@ -25,7 +25,11 @@ C. make your host's traffic secure by configuring ufw, firewalld, IPTABLES...etc
 
 
 
-# nginx
+# install nginx 
+$ sudo apt update
+$ sudo apt install nginx
+
+# install nginx from source
 //copied from nginx official website for Ubuntu:
 
 The available NGINX Ubuntu release support is listed at this [distribution](https://nginx.org/packages/ubuntu/dists/) page. For a mapping of Ubuntu versions to release names, please visit the [Official Ubuntu Releases page](https://wiki.ubuntu.com/Releases).
