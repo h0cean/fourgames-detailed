@@ -40,14 +40,16 @@ The available NGINX Ubuntu release support is listed at this [distribution](http
 
 Append the appropriate stanza to /etc/apt/sources.list. If there is concern about persistence of repository additions (i.e. DigitalOcean Droplets), the appropriate stanza may instead be added to a different list file under /etc/apt/sources.list.d/, such as /etc/apt/sources.list.d/nginx.list:
 ## Replace $release with your corresponding Ubuntu release:
+
 `deb https://nginx.org/packages/ubuntu/ $release nginx`
+
 `deb-src https://nginx.org/packages/ubuntu/ $release nginx`
 
-   e.g. Ubuntu 20.04 (Focal Fossa):
+e.g. Ubuntu 20.04 (Focal Fossa):
   
-  `deb https://nginx.org/packages/ubuntu/ focal nginx
+  `deb https://nginx.org/packages/ubuntu/ focal nginx`
   
-   deb-src https://nginx.org/packages/ubuntu/ focal nginx`
+   `deb-src https://nginx.org/packages/ubuntu/ focal nginx`
 ## To install the packages, execute in your shell:
 
 `$ sudo apt update
