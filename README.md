@@ -150,4 +150,10 @@ replace DOMAIN and  execute:
 
 # install node-js
 full credit to : [digital-ocean](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04)
+### intro
 There are quite a few ways to get up and running with Node.js on your Ubuntu 22.04 server. Your circumstances will dictate which of the above methods is best for your needs. While using the packaged version in Ubuntu’s repository is the easiest method, using nvm or a NodeSource PPA offers additional flexibility.
+
+
+### Warning: 
+The version of Node.js included with Ubuntu 22.04, version 12.22.9, is an LTS, or “long-term support” release. It is technically outdated, but should be supported until the release of Ubuntu 24.04.
+
