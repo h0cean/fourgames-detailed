@@ -155,5 +155,8 @@ There are quite a few ways to get up and running with Node.js on your Ubuntu 22.
 
 
 ### Warning: 
-The version of Node.js included with Ubuntu 22.04, version 12.22.9, is an LTS, or “long-term support” release. It is technically outdated, but should be supported until the release of Ubuntu 24.04.
+The version of Node.js included with Ubuntu 22.04, version 12.22.9, is an LTS, or “long-term support” release. It is technically outdated, but should be supported until the release of Ubuntu 24.04. ... so... its better to NOT use the easy way(packaged version in Ubuntu’s repository)
+
+
+
 
