@@ -174,5 +174,22 @@ This will install the `nvm` script to your user account. To use it, you must fir
 
 `source ~/.bashrc`
 
+Now, you can ask NVM which versions of Node are available:
+
+`nvm list-remote`
+
+You can install a version of Node by typing any of the release versions you see. For instance, to get version v16.14.0 (another LTS release), you can type:
+
+`nvm install v16.14.0`
+
+You can see the different versions you have installed by typing:
+
+`nvm list`
+
+This shows the currently active version on the first line (`-> v16.14.0`), followed by some named aliases and the versions that those aliases point to.
+
+##### Note: 
+if you also have a version of Node.js installed through `apt`, you may see a `system` entry here. You can always activate the system-installed version of Node using `nvm use system`.
+
 
 
