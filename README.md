@@ -14,6 +14,8 @@ B. linux-based-host with sudo access
 
 C. nginx 
 
+D.node.js
+
 # zero step
 
 A. buy a domain and point it to your host's ip by using Cloudflare DNS service
