@@ -188,6 +188,9 @@ You can see the different versions you have installed by typing:
 
 This shows the currently active version on the first line (`-> v16.14.0`), followed by some named aliases and the versions that those aliases point to.
 
+you can also `node -v` to see node version installed
+
+
 ##### Note: 
 if you also have a version of Node.js installed through `apt`, you may see a `system` entry here. You can always activate the system-installed version of Node using `nvm use system`.
 
