@@ -194,5 +194,19 @@ you can also `node -v` to see node version installed
 ##### Note: 
 if you also have a version of Node.js installed through `apt`, you may see a `system` entry here. You can always activate the system-installed version of Node using `nvm use system`.
 
+# Install mongo-db
+From a terminal, install gnupg and curl if they are not already available:
+`sudo apt-get install gnupg curl`
+
+To import the MongoDB public GPG key from 
+https://pgp.mongodb.com/server-7.0.asc
+, run the following command:
+`curl -fsSL https://pgp.mongodb.com/server-7.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
+   --dearmor`
+
+for ubuntu 22.04 ,Create the list file /etc/apt/sources.list.d/mongodb-org-7.0.list for your version of Ubuntu.
+   `echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list`
+
 
 
